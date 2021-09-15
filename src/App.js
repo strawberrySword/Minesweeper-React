@@ -155,7 +155,7 @@ const App = () => {
       const newBoard = board
       if( mine.minesCount === "" ){
         newBoard[mine.y][mine.x].minesCount = "🚩"
-        setSettings(prevState => { return { ...prevState, flagsPlaced: settings.flagsPlaced++} })
+        setSettings({ ...settings, flagsPlaced: settings.flagsPlaced++})
         if(newBoard[mine.y][mine.x].isBomb){
           setSettings(prevState => { return { ...prevState, minesLeft: settings.minesLeft--} })
 
